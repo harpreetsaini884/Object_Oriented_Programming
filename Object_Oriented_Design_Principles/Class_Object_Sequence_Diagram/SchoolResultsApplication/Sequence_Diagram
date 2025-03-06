@@ -1,0 +1,12 @@
+Student       GradeCalculator
+  |               |
+  |  requestGrade()  |
+  |--------------->|  
+  |               |
+  |  calculateGrade() |
+  |--------------->|
+  |               |
+  |  return grade  |
+  |<---------------|
+  |  displayGrade() |
+  |--------------->|

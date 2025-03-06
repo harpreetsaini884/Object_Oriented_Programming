@@ -1,0 +1,12 @@
+Customer        BillGenerator
+   |                |
+   |  generateBill()  |
+   |----------------->|
+   |                |
+   |  calculateTotal() |
+   |----------------->|
+   |                |
+   |  return total   |
+   |<----------------|
+   |  displayBill()  |
+   |---------------->|

@@ -1,0 +1,11 @@
++--------------+         +-----------------------+
+| Customer: Alice |------->| Product: Apples     |
+| Purchased:      |        | Quantity: 2 kg      |
+|                |        | Price per kg: $3    |
++--------------+         +-----------------------+
+       |
+       |---------> +----------------------+
+                   | Product: Milk         |
+                   | Quantity: 1 liter     |
+                   | Price per liter: $2   |
+                   +----------------------+

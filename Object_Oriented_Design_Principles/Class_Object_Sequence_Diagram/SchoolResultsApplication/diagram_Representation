@@ -1,0 +1,37 @@
+Class Diagram:
+Structure:
+Student
+
+name: String
+subjects: List<Subject>
+addSubject(subject: Subject): void
+calculateGrade(): String
+Subject
+
+name: String
+marks: int
+GradeCalculator
+
+calculateGrade(student: Student): String
+
++-----------------+      1    *     +----------------+
+|    Student      |----------------|    Subject     |
++-----------------+                +----------------+
+| - name: String |                | - name: String |
+| - subjects: List<Subject> |      | - marks: int  |
++-----------------+                +----------------+
+| + addSubject() |   
+| + calculateGrade() |   
++-----------------+
+
+              +------------------------+
+              |    GradeCalculator     |
+              +------------------------+
+              | + calculateGrade()     |
+              +------------------------+
+                        |
+                        | Uses
+                        v
+                 +-----------------+
+                 |    Student      |
+                 +-----------------+

@@ -1,0 +1,44 @@
+Class Diagram
+Structure:
+Customer
+
+name: String
+purchasedProducts: List<Product>
+addProduct(product: Product): void
+generateBill(): double
+Product
+
+name: String
+quantity: double
+pricePerUnit: double
+calculateTotalPrice(): double
+BillGenerator
+
+calculateTotal(customer: Customer): double
+Relationships:
+Composition: Customer owns multiple Product objects. If a customer is deleted, their purchased products are also removed.
+BillGenerator is responsible for computing the total bill.
+Diagram Representation:
+
+
++------------------+      1    *     +----------------+
+|    Customer     |----------------|    Product     |
++------------------+                +----------------+
+| - name: String  |                | - name: String |
+| - purchasedProducts: List<Product> | - quantity: double |
++------------------+                | - pricePerUnit: double |
+| + addProduct()  |                +----------------+
+| + generateBill() |   
++------------------+
+
+              +----------------------+
+              |    BillGenerator     |
+              +----------------------+
+              | + calculateTotal()   |
+              +----------------------+
+                        |
+                        | Uses
+                        v
+                 +------------------+
+                 |    Customer      |
+                 +------------------+
